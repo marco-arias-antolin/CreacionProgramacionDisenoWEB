@@ -72,19 +72,61 @@
 			<p>Los puntos de ruptura se usan para el diseño responsive, pudiendo especificar un tamaño para cada tipo de dispositivo: <a href="https://getbootstrap.com/docs/5.3/layout/breakpoints/" target="_blank">breakpoints</a></p>
 			<p>En bootstrap hay distintos contenedores: <a href="https://getbootstrap.com/docs/5.3/layout/containers/" target="_blank">containers</a></p>
 			<p>El sistema de rejilla de bootstrap tiene doce columnas: <a href="https://getbootstrap.com/docs/5.3/layout/grid/" target="_blank">grid</a></p>
-			<p>El margen y el relleno también tienen clases:</p>
+			<h4>El margen y el relleno</h4>
+			<p>Las clases para el margen y el relleno se usan con el siguiente formato para tamaño xs:</p>
 			<ul>
-				<li>Margen (margin): m-0, ..., m-5</li>
-				<li>Relleno (padding): p-0, ..., p-5</li>
+				<li>{property}{sides}-{size}</li>
+			</ul>
+			<p>Para el resto de tamaños (sm, md, lg, xl y xxl) se usa el formato:</p>
+			<ul>
+				<li>{property}{sides}-{breakpoint}-{size}</li>
+			</ul>
+			<h5>Propiedad (property)</h5>
+			<ul>
+				<li>Margen (margin): m</li>
+				<li>Relleno (padding): p</li>
+			</ul>
+			<h5>Lados (sides)</h5>
+			<ul>
+				<li>t ➡️ (top) Arriba</li>
+				<li>b ➡️ (bottom) Abajo</li>
+				<li>s ➡️ (start) izquierda en LTR, derecha en RTL</li>
+				<li>e ➡️ (end) derecha en LTR, izquierda en RTL</li>
+				<li>x ➡️ (eje x) izquierda y derecha</li>
+				<li>y ➡️ (eje y) arriba y abajo</li>
+				<li>blank ➡️ No poner nada para aplicarlo a los cuatro lados</li>
+			</ul>
+			<h5>Tamaño (size)</h5>
+			<ul>
+				<li>0 ➡️ Sin margen/relleno</li>
+				<li>1 ➡️ $spacer * .25</li>
+				<li>2 ➡️ $spacer * .5</li>
+				<li>3 ➡️ $spacer</li>
+				<li>4 ➡️ $spacer * 1.5</li>
+				<li>5 ➡️ $spacer * 3</li>
+				<li>auto ➡️ automático</li>
+			</ul>
+			<h5>Ejemplos de margen y relleno</h5>
+			<ul>
+				<li>mt-0 ➡️ sin margen arriba</li>
+				<li>ms-1 ➡️ margen izquierdo en LTR</li>
+				<li>py-2 ➡️ relleno en el eje y</li>
+				<li>p-3 ➡️ relleno en los cuatro lados</li>
+				<li>mx-auto ➡️ margen en el eje x automático</li>
 			</ul>
 		</section>
 		<section>
-			<h2>Ejemplo</h2>
-			<div class="row">
-				<div class="col col-sm-12 col-md-6 col-lg-2">Columna 1</div>
-				<div class="col col-sm-12 col-md-6 col-lg-8">Columna 2</div>
-				<div class="col col-sm-12 col-md-6 col-lg-1">Columna 3</div>
-				<div class="col col-sm-12 col-md-6 col-lg-1">Columna 4</div>
+			<h2>Ejemplo responsive de columnas</h2>
+			<p>Las columnas ocupan</p>
+			<ul>
+				<li>sm (≥576px) el 100%</li>
+				<li>md (≥768px) el 50%</li>
+				<li>lg (≥992px) y más grandes ocupan 2-8-1-1 (total 12)</li>
+			</ul>
+			<div style="width: fit-content; padding-right: 3rem;">
+				<iframe src="ejemploColumnas.html" style="height:166px; width:576px;"></iframe>
+				<iframe src="ejemploColumnas.html" style="height:86px; width:768px;"></iframe>
+				<iframe src="ejemploColumnas.html" style="height:46px; width:992px;"></iframe>
 			</div>
 		</section>
 	</main>
