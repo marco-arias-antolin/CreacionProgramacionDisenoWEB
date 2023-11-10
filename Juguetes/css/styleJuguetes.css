@@ -22,3 +22,20 @@
 	position: absolute;
 	right: 6px;
 }
+
+header {
+	background: #619aef;
+}
+
+header form {
+	position: relative;
+}
+
+header label {
+	position: absolute;
+	left: 20px;
+}
+
+header .ico {
+	height: 22px;
+}
