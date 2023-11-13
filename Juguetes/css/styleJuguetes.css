@@ -15,6 +15,54 @@
 	transition: .6s;
 }
 
+#busqueda {
+	background: #619aef;
+}
+
+#busqueda form {
+	position: relative;
+}
+
+#busqueda label {
+	position: absolute;
+	/* background: red; */
+	left: 6px;
+}
+
+#busqueda .ico {
+	height: 22px;
+}
+
+header nav {
+	font-family: Urbanist, "Helvetica Neue", sans-serif;
+	border-bottom: 1px solid #ddd;
+}
+
+header nav a {
+	color: black;
+	font-weight: bold;
+	line-height: 3;
+	margin: 6px;
+	padding-bottom: 6px;
+	position: relative;
+	text-decoration: none;
+}
+
+header nav a::after {
+	border-bottom: 3px solid #619aef;
+	content: ' ';
+	display: inline-block;
+	left: 50%;
+	position: absolute;
+	transition: .6s;
+	width: 0px;
+}
+
+header nav a:hover::after {
+	left: 0;
+	width: 100%;
+}
+
 .icon-cross-line {
 	cursor: pointer;
 	font-family: Arial, Helvetica, sans-serif;
@@ -23,19 +71,15 @@
 	right: 6px;
 }
 
-header {
-	background: #619aef;
+.icon-cross-line::before {
+	content: '╳';
 }
 
-header form {
-	position: relative;
+label[for="search-field"] {
+	transition: .6s;
 }
 
-header label {
-	position: absolute;
-	left: 20px;
-}
-
-header .ico {
-	height: 22px;
+#search-field:focus~label[for="search-field"] {
+	transform: scale(.7) translate(0, -12px);
+	transform-origin: top left;
 }

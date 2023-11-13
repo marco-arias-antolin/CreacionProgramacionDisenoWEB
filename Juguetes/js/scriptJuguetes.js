@@ -21,3 +21,7 @@ closeBanner.onclick = (event) => {
 	banner.style.display = 'none';
 	displayBanner = false;
 }
+
+$(document).ready(function () {
+	$(".slider").bxSlider();
+});
