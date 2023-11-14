@@ -21,7 +21,20 @@ closeBanner.onclick = (event) => {
 	banner.style.display = 'none';
 	displayBanner = false;
 }
-
 $(document).ready(function () {
-	$(".slider").bxSlider();
+	var newDiv = document.createElement("div");
+	var newContent = document.createTextNode('test');
+	newDiv.appendChild(newContent);
+	$(".bxslider").bxSlider({
+		auto: true,
+		controls: false,
+		autoControls: false,
+		stopAutoOnClick: true,
+		mode: 'fade',
+		pager: false,
+		nextText: '➡️',
+		prevText: '⬅️',
+		startText: '▶️',
+		stopText: '⏸️',
+	});
 });
