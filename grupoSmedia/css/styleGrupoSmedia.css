@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
 
 :root {
@@ -5,40 +6,123 @@
 	--color: white;
 }
 
+html {
+	font-family: Raleway, sans-serif;
+	color: var(--color) !important;
+}
+
 header {
 	background: var(--corporativo);
 }
 
-#redes {
+#encabezado {
+	align-items: center;
+	box-shadow: 0px -20px 18px -20px rgba(0, 0, 0, 0.95) inset;
+	color: var(--color);
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	padding: .3rem;
+}
+
+#encabezado h6 {
+	font-family: "Rock Salt", Sans-serif;
+	font-size: .9375em;
+	margin: .7rem 0 .9rem;
+	padding: 0 .6rem;
+	white-space: nowrap;
+}
+
+#encabezado #icons {
 	display: flex;
 }
 
-#redes h6 {
-	font-family: "Rock Salt", Sans-serif;
-}
-
-#redes img {
-	height: 1rem;
-}
-
-#redes a {
+#encabezado a {
+	font-size: 1.1em;
+	display: inline-flex;
 	color: var(--color);
+	padding: 0 .6rem;
 	text-decoration: none;
 }
 
+#encabezado img {
+	height: 1.1rem;
+}
+
+#encabezado form {
+	display: flex;
+	font-size: .9em;
+	padding: 6px;
+}
+
 #search-input {
+	width: 266px;
+	border-radius: .1rem 0 0 .1rem;
 	border: none;
 	margin: 0;
 	padding: 0 .6rem;
 }
 
-#redes form button {
+#encabezado form button {
 	background: #C00202;
+	border-radius: 0 .1rem .1rem 0;
 	border: none;
+	color: var(--color);
 	padding: 0 6px;
 	transition: .6s;
 }
 
-#redes form button:hover {
+#encabezado form button:hover {
 	background: rgba(240, 7, 7, 0.97);
+}
+
+#menuPrincipal {
+	border-bottom: 2px solid #d3d3d3;
+	display: flex;
+	justify-content: space-around;
+	padding: 10px;
+	column-gap: .6rem;
+}
+
+#menuPrincipal img {
+	width: 230px;
+	padding-bottom: 15px;
+}
+
+#menuPrincipal #enlaces {
+	align-items: center;
+	display: inline-flex;
+	flex-wrap: wrap;
+}
+
+#menuPrincipal #enlaces a {
+	/* border-bottom: 2px solid transparent; */
+	color: var(--color);
+	padding: 0 .6rem;
+	position: relative;
+	text-decoration: none;
+	transition: .6s;
+}
+
+#menuPrincipal #enlaces a:hover {
+	color: #e2cece;
+}
+
+#menuPrincipal #enlaces a::after {
+	border-bottom: 2px solid #e2cece;
+	content: ' ';
+	display: inline-block;
+	left: 100%;
+	position: absolute;
+	transition: .6s;
+	width: 0;
+}
+
+#menuPrincipal #enlaces a:hover::after {
+	left: 0;
+	width: 100%;
+}
+
+#portada {
+	background: var(--corporativo);
 }
