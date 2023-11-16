@@ -2,8 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
 
 :root {
+	--bgSearchBtn: #C00202;
+	--bgSearchBtnHover: #f00707f7;
 	--corporativo: #A00;
 	--color: white;
+	--subMenuColor: #424242;
 }
 
 html {
@@ -64,7 +67,7 @@ header {
 }
 
 #encabezado form button {
-	background: #C00202;
+	background: var(--bgSearchBtn);
 	border-radius: 0 .1rem .1rem 0;
 	border: none;
 	color: var(--color);
@@ -73,7 +76,7 @@ header {
 }
 
 #encabezado form button:hover {
-	background: rgba(240, 7, 7, 0.97);
+	background: var(--bgSearchBtnHover);
 }
 
 #menuPrincipal {
@@ -89,26 +92,32 @@ header {
 	padding-bottom: 15px;
 }
 
+#menuPrincipal ul {
+	list-style: none;
+}
+
 #menuPrincipal #enlaces {
 	align-items: center;
 	display: inline-flex;
 	flex-wrap: wrap;
 }
 
-#menuPrincipal #enlaces a {
-	/* border-bottom: 2px solid transparent; */
+#menuPrincipal #enlaces>li {
+	position: relative;
+}
+
+#menuPrincipal #enlaces>li>a {
 	color: var(--color);
 	padding: 0 .6rem;
-	position: relative;
 	text-decoration: none;
 	transition: .6s;
 }
 
-#menuPrincipal #enlaces a:hover {
+#menuPrincipal #enlaces>li:hover>a {
 	color: #e2cece;
 }
 
-#menuPrincipal #enlaces a::after {
+#menuPrincipal #enlaces>li::after {
 	border-bottom: 2px solid #e2cece;
 	content: ' ';
 	display: inline-block;
@@ -118,11 +127,44 @@ header {
 	width: 0;
 }
 
-#menuPrincipal #enlaces a:hover::after {
+#menuPrincipal #enlaces>li:hover::after {
 	left: 0;
 	width: 100%;
 }
 
+#menuPrincipal #enlaces .subMenu {
+	background: var(--color);
+	background-clip: padding-box;
+	border-top: .6rem solid transparent;
+	inset: 1.4rem auto auto 0;
+	padding: 0;
+	position: absolute;
+	transform-origin: left top;
+	transform: scale(0);
+	transition: .6s;
+}
+
+#menuPrincipal #enlaces li:hover .subMenu {
+	transform: scale(1);
+	z-index: 1;
+}
+
+#menuPrincipal #enlaces .subMenu a {
+	color: var(--subMenuColor);
+	display: block;
+	padding: 0 .6rem;
+	text-decoration: none;
+	transition: .6s;
+	white-space: nowrap;
+}
+
+#menuPrincipal #enlaces .subMenu a:hover {
+	background: var(--corporativo);
+	color: var(--color);
+}
+
 #portada {
 	background: var(--corporativo);
+	color: var(--color);
+	padding: 1rem;
 }
