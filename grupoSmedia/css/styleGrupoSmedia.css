@@ -9,9 +9,9 @@
 	--subMenuColor: #424242;
 }
 
-html {
+* {
 	font-family: Raleway, sans-serif;
-	color: var(--color) !important;
+	color: var(--color);
 }
 
 header {
@@ -163,8 +163,32 @@ header {
 	color: var(--color);
 }
 
+.breadcrumb {
+	margin: 0;
+}
+
 #portada {
 	background: var(--corporativo);
+	box-shadow: 0px 3px 8px -1px #00000069;
+	border-bottom: 1px solid #fff;
 	color: var(--color);
-	padding: 1rem;
+	padding: 5px 7px 7px;
+	text-align: center;
+}
+
+#portada h2 {
+	margin: 0;
+}
+
+#portada h2:nth-of-type(1) {
+	/* font-size: 25px; */
+	font-size: calc(.95rem + .9vw);
+}
+
+#portada h2:nth-of-type(2) {
+	text-transform: uppercase;
+}
+
+.bxslider img {
+	object-fit: contain;
 }

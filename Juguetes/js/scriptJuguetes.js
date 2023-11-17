@@ -22,9 +22,6 @@ closeBanner.onclick = (event) => {
 	displayBanner = false;
 }
 $(document).ready(function () {
-	var newDiv = document.createElement("div");
-	var newContent = document.createTextNode('test');
-	newDiv.appendChild(newContent);
 	$(".bxslider").bxSlider({
 		auto: true,
 		controls: false,
