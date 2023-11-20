@@ -1,0 +1,44 @@
+.block-social ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: inline-block;
+}
+
+.block-social ul li {
+	display: inline-block;
+}
+
+.block-social a>span {
+	display: none;
+}
+
+.block-social .facebook a::after {
+	font-family: "FontAwesome";
+	content: "\f09a";
+}
+
+.block-social .twitter a::after {
+	font-family: "FontAwesome";
+	content: "\f099";
+}
+
+.block-social .youtube a::after {
+	font-family: "FontAwesome";
+	content: "\f16a";
+}
+
+.block-social .pinterest a::after {
+	font-family: "FontAwesome";
+	content: "\f0d2";
+}
+
+.block-social .instagram a::after {
+	font-family: "FontAwesome";
+	content: "\f16d";
+}
+
+.block-social .blog a::after {
+	font-family: "FontAwesome";
+	content: "\f032";
+}
