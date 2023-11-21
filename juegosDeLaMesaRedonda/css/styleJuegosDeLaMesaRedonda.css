@@ -1,12 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+	font-family: "Poppins", sans-serif !important;
+}
+
 .block-social ul {
+	display: inline-block;
+	line-height: 44px;
+	list-style: none;
+	font-weight: 500;
 	margin: 0;
 	padding: 0;
-	list-style: none;
-	display: inline-block;
 }
 
 .block-social ul li {
 	display: inline-block;
+}
+
+.block-social ul li a {
+	color: white;
+	padding-left: .6rem;
+	text-decoration: none;
+}
+
+.block-social ul li a::after {
+	font-family: "FontAwesome";
 }
 
 .block-social a>span {
@@ -14,31 +32,36 @@
 }
 
 .block-social .facebook a::after {
-	font-family: "FontAwesome";
 	content: "\f09a";
 }
 
 .block-social .twitter a::after {
-	font-family: "FontAwesome";
 	content: "\f099";
+	animation: twitter 6s infinite;
+}
+
+@keyframes twitter {
+	0% {
+		content: "\f099";
+	}
+
+	50% {
+		content: "\e61b";
+	}
 }
 
 .block-social .youtube a::after {
-	font-family: "FontAwesome";
 	content: "\f16a";
 }
 
 .block-social .pinterest a::after {
-	font-family: "FontAwesome";
 	content: "\f0d2";
 }
 
 .block-social .instagram a::after {
-	font-family: "FontAwesome";
 	content: "\f16d";
 }
 
 .block-social .blog a::after {
-	font-family: "FontAwesome";
 	content: "\f032";
 }
