@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 * {
-	font-family: "Poppins", sans-serif !important;
+	font-family: "Poppins", sans-serif;
 }
 
 .block-social ul {
@@ -64,4 +64,22 @@
 
 .block-social .blog a::after {
 	content: "\f032";
+}
+
+#searchtopbox input {
+	border-radius: 2rem 0 0 2rem;
+}
+
+#searchtopbox button {
+	background-color: #C44C4B;
+	border-radius: 0 2rem 2rem 0;
+	border: var(--bs-border-width) solid var(--bs-border-color);
+}
+
+#searchtopbox button img {
+	filter: invert(1);
+}
+
+#searchtopbox button:hover img {
+	filter: invert(64%) sepia(73%) saturate(393%) hue-rotate(7deg) brightness(101%) contrast(105%);
 }
